@@ -667,20 +667,34 @@ img {
 .avatar-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1.1;
+  aspect-ratio: 1 / 1.15;
   border-radius: 20px;
   overflow: hidden;
   background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.avatar-svg-illu {
+.avatar-real-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.5s ease;
+}
+
+.avatar-glass-card:hover .avatar-real-img {
+  transform: scale(1.04);
+}
+
+.avatar-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(6, 8, 24, 0.75) 0%, transparent 40%);
+  pointer-events: none;
 }
 
 .avatar-badge-floating {
@@ -1080,8 +1094,129 @@ img {
 }
 
 .mockup-content {
-  padding: 1.25rem;
+  padding: 0;
   background: #090e24;
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-real-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.mockup-overlay-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(6, 8, 24, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.35rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Certificate Proof Badge & Card */
+.certificate-badge-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cert-info-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-icon-award {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #ec4899);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.25rem;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  flex-shrink: 0;
+}
+
+.cert-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cert-desc {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.cert-thumbnail-btn {
+  position: relative;
+  width: 70px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(245, 158, 11, 0.6);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-thumbnail-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+}
+
+.cert-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-zoom-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cert-thumbnail-btn:hover .cert-zoom-overlay {
+  opacity: 1;
+}
+
+/* Modal Certificate Image */
+.modal-cert-preview {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .nilam-mockup-ui {
