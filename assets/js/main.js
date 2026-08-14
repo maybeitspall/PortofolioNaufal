@@ -238,13 +238,16 @@ function initProjectModal() {
 }
 
 /* --------------------------------------------------------------------------
-   7. CONTACT FORM & NOTIFICATIONS
+   7. CONTACT FORM (FORMSPREE AJAX SUBMISSION)
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Kirim Pesan';
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = form.querySelector('[name="name"]').value.trim();
     const email = form.querySelector('[name="email"]').value.trim();
@@ -255,13 +258,58 @@ function initContactForm() {
       return;
     }
 
-    // Direct mailto / notification simulation
-    const mailtoUrl = `mailto:nfadhillah206@gmail.com?subject=Portfolio%20Contact%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)}`;
-    window.location.href = mailtoUrl;
+    // Set loading state
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Mengirim...</span> <i class="fa-solid fa-spinner fa-spin"></i>';
+    }
 
-    showToast('Terima kasih! Email client Anda akan terbuka untuk mengirim pesan.', 'success');
-    form.reset();
+    try {
+      // Get action endpoint or use default
+      const endpoint = form.getAttribute('action') || 'https://formspree.io/f/xyzyqobk';
+      
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+          _subject: `Pesan Portofolio Baru dari ${name}`
+        })
+      });
+
+      if (response.ok) {
+        showToast('Pesan berhasil terkirim langsung ke inbox Naufal! Terima kasih.', 'success');
+        form.reset();
+      } else {
+        const data = await response.json();
+        if (data.errors) {
+          showToast('Gagal mengirim pesan: ' + data.errors.map(err => err.message).join(', '), 'error');
+        } else {
+          // Fallback to mailto if Formspree ID is not configured yet
+          fallbackMailto(name, email, message);
+        }
+      }
+    } catch (error) {
+      console.warn('Form submission network error, fallback to mailto:', error);
+      fallbackMailto(name, email, message);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    }
   });
+}
+
+function fallbackMailto(name, email, message) {
+  const mailtoUrl = `mailto:nfadhillah206@gmail.com?subject=Portfolio%20Contact%20from%20${encodeURIComponent(name)}&body=${encodeURIComponent(`Nama: ${name}\nEmail: ${email}\n\nPesan:\n${message}`)}`;
+  window.location.href = mailtoUrl;
+  showToast('Formspree belum aktif. Membuka aplikasi email Anda...', 'success');
 }
 
 function showToast(message, type = 'success') {
