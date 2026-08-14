@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Naufal Fadhillah — Full Stack Developer | Portfolio</title>
+  <meta name="title" content="Naufal Fadhillah — Full Stack Developer | Portfolio" />
+  <meta name="description" content="Portofolio resmi Naufal Fadhillah, Mahasiswa S1 Teknik Komputer Universitas Syiah Kuala & Full Stack Developer Enthusiast. Spesialisasi FastAPI, PostgreSQL, Computer Vision, dan Modern Web." />
+  <meta name="keywords" content="Naufal Fadhillah, Portfolio, Full Stack Developer, Teknik Komputer, Universitas Syiah Kuala, NILAMTRACE, FastAPI, Web Developer Aceh" />
+  <meta name="author" content="Naufal Fadhillah" />
+  <meta name="theme-color" content="#060818" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://maybeitspall.github.io/Portofolio/" />
+  <meta property="og:title" content="Naufal Fadhillah — Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Portofolio resmi Naufal Fadhillah — Mahasiswa S1 Teknik Komputer & Full Stack Developer Enthusiast." />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Liquid Glass Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Liquid Canvas Background -->
+  <canvas id="liquid-canvas"></canvas>
+  <div class="ambient-grid"></div>
+
+  <!-- Custom Glowing Liquid Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- =========================================================================
+       1. STICKY GLASS NAVBAR
+       ========================================================================= -->
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand">
+        <div class="nav-logo-icon">NF</div>
+        <span>Naufal<span class="gradient-brand-text">.dev</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link">Proyek</a></li>
+        <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+        <li><a href="#education" class="nav-link">Pendidikan</a></li>
+        <li><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.1rem; font-size: 0.88rem;">
+          <span>Hubungi Saya</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">Tentang</a>
+      <a href="#skills" class="nav-link">Keahlian</a>
+      <a href="#projects" class="nav-link">Proyek</a>
+      <a href="#experience" class="nav-link">Pengalaman</a>
+      <a href="#education" class="nav-link">Pendidikan</a>
+      <a href="#contact" class="nav-link">Kontak</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 0.5rem;">
+        <span>Hubungi Saya</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Content -->
+          <div class="hero-content reveal">
+            <div class="hero-badge">
+              <span class="hero-badge-pulse"></span>
+              <span>Available for Opportunities</span>
+            </div>
+
+            <h1 class="hero-title">
+              Halo, Saya <br />
+              <span class="gradient-brand-text">Naufal Fadhillah</span>
+            </h1>
+
+            <div class="hero-typewriter-container">
+              <span>Saya seorang </span>
+              <span class="typewriter-text">Full Stack Developer Enthusiast</span>
+            </div>
+
+            <p class="hero-desc">
+              Mahasiswa S1 Teknik Komputer Universitas Syiah Kuala yang berfokus dalam rancang bangun aplikasi web modern, backend services dengan <strong>FastAPI & PostgreSQL</strong>, serta integrasi <strong>Machine Learning & Computer Vision</strong>.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>Lihat Proyek Terpilih</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Hubungi Saya</span>
+                <i class="fa-regular fa-paper-plane"></i>
+              </a>
+              <a href="https://github.com/maybeitspall" target="_blank" rel="noopener noreferrer" class="glass-pill" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+
+            <div class="hero-quick-info">
+              <div class="hero-quick-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Banda Aceh, Indonesia</span>
+              </div>
+              <div class="hero-quick-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>USK (Teknik Komputer)</span>
+              </div>
+              <div class="hero-quick-item">
+                <i class="fa-solid fa-star" style="color: #fbbf24;"></i>
+                <span>IPK: 3.26 / 4.00</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Visual (Glass Avatar Card) -->
+          <div class="hero-visual reveal">
+            <!-- Floating Orbit Pills -->
+            <div class="floating-pill-orbit orbit-1">
+              <i class="fa-solid fa-code" style="color: #6366f1;"></i>
+              <span>Full Stack Dev</span>
+            </div>
+
+            <div class="floating-pill-orbit orbit-2">
+              <i class="fa-solid fa-brain" style="color: #06b6d4;"></i>
+              <span>Computer Vision</span>
+            </div>
+
+            <div class="avatar-glass-card glass-card">
+              <div class="avatar-frame">
+                <!-- High Quality Aesthetic SVG Avatar Illustration -->
+                <svg class="avatar-svg-illu" viewBox="0 0 400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1e1b4b" />
+                      <stop offset="50%" stop-color="#0f172a" />
+                      <stop offset="100%" stop-color="#020617" />
+                    </linearGradient>
+                    <linearGradient id="jacketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#059669" />
+                      <stop offset="100%" stop-color="#047857" />
+                    </linearGradient>
+                    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#fed7aa" />
+                      <stop offset="100%" stop-color="#fba86e" />
+                    </linearGradient>
+                    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#1e293b" />
+                      <stop offset="100%" stop-color="#0f172a" />
+                    </linearGradient>
+                    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+                      <feGaussianBlur stdDeviation="15" result="blur" />
+                      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                    </filter>
+                  </defs>
+                  <!-- Background Glow Orbs -->
+                  <circle cx="200" cy="180" r="140" fill="#6366f1" opacity="0.25" filter="url(#glowFilter)" />
+                  <circle cx="280" cy="220" r="90" fill="#06b6d4" opacity="0.2" filter="url(#glowFilter)" />
+                  
+                  <!-- Body / Almamater Jacket (USK Green) -->
+                  <path d="M90 440 L110 320 L160 300 L200 340 L240 300 L290 320 L310 440 Z" fill="url(#jacketGrad)" />
+                  <!-- White Inner Shirt & Tie -->
+                  <polygon points="175,305 200,340 225,305 200,285" fill="#f8fafc" />
+                  <polygon points="195,310 205,310 203,340 197,340" fill="#0f172a" />
+
+                  <!-- Neck -->
+                  <rect x="180" y="240" width="40" height="50" rx="8" fill="url(#skinGrad)" />
+
+                  <!-- Head Base -->
+                  <ellipse cx="200" cy="190" rx="65" ry="75" fill="url(#skinGrad)" />
+
+                  <!-- Ears -->
+                  <ellipse cx="132" cy="195" rx="12" ry="18" fill="#fba86e" />
+                  <ellipse cx="268" cy="195" rx="12" ry="18" fill="#fba86e" />
+
+                  <!-- Eyes & Brows -->
+                  <path d="M165 175 Q177 170 188 175" stroke="#1e293b" stroke-width="4" stroke-linecap="round" />
+                  <path d="M212 175 Q223 170 235 175" stroke="#1e293b" stroke-width="4" stroke-linecap="round" />
+                  <ellipse cx="177" cy="188" rx="6" ry="6" fill="#0f172a" />
+                  <ellipse cx="223" cy="188" rx="6" ry="6" fill="#0f172a" />
+                  <circle cx="179" cy="186" r="2" fill="#fff" />
+                  <circle cx="225" cy="186" r="2" fill="#fff" />
+
+                  <!-- Nose & Smile -->
+                  <path d="M200 185 L196 205 L204 205" stroke="#ea580c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+                  <path d="M185 222 Q200 234 215 222" stroke="#9a3412" stroke-width="3" stroke-linecap="round" fill="none" />
+
+                  <!-- Hair Style -->
+                  <path d="M135 180 C130 130 160 110 200 110 C240 110 270 130 265 180 C260 145 235 130 200 130 C165 130 140 145 135 180 Z" fill="url(#hairGrad)" />
+                  <path d="M140 150 Q160 120 180 140 Q210 115 240 140 Q260 125 260 160 Q230 130 200 135 Q170 135 140 150 Z" fill="#0f172a" />
+
+                  <!-- Tech Grid Hologram Lines -->
+                  <line x1="80" y1="200" x2="320" y2="200" stroke="rgba(99,102,241,0.2)" stroke-dasharray="4,4" />
+                  <line x1="80" y1="260" x2="320" y2="260" stroke="rgba(6,182,212,0.2)" stroke-dasharray="4,4" />
+                </svg>
+              </div>
+
+              <!-- Floating badge on card bottom -->
+              <div class="avatar-badge-floating">
+                <div class="avatar-badge-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="avatar-badge-text">
+                  <h4>Naufal Fadhillah</h4>
+                  <p>Informatics & Computer Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. ABOUT SECTION
+         ========================================================================= -->
+    <section id="about" class="section-about">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-user"></i> Ringkasan Profil</div>
+          <h2 class="section-title">Tentang <span class="gradient-brand-text">Saya</span></h2>
+          <p class="section-subtitle">Mengenal lebih dalam latar belakang akademik, visi teknologi, dan minat saya.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- About Narrative -->
+          <div class="about-card-main glass-card reveal">
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;" class="gradient-text">
+              Dedikasi untuk Solusi Nyata Berbasis Teknologi
+            </h3>
+            <p class="about-text">
+              Saya adalah mahasiswa Jurusan <strong>S1 Teknik Komputer di Universitas Syiah Kuala</strong> yang memiliki antusiasme tinggi dalam rekayasa perangkat lunak dan pengembangan sistem cerdas.
+            </p>
+            <p class="about-text">
+              Memiliki pengalaman langsung dalam merancang arsitektur web full stack dari antarmuka modern yang responsif (Frontend) hingga sistem backend terintegrasi database relasional dan pipeline machine learning. Saya merupakan pribadi yang berorientasi pada pemecahan masalah, senang bekerja kolaboratif dalam tim, dan selalu terdorong untuk mengeksplorasi teknologi terdepan.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div>
+                  <h5>Full Stack Mindset</h5>
+                  <p>Frontend interaktif & backend terstruktur dengan REST API.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-microchip"></i></div>
+                <div>
+                  <h5>AI & Computer Vision</h5>
+                  <p>Implementasi model klasifikasi citra pada real-world dashboard.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <div>
+                  <h5>Kepemimpinan & Operasional</h5>
+                  <p>Pengalaman manajerial sebagai Supervisor tim & operasional toko.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon"><i class="fa-solid fa-rotate"></i></div>
+                <div>
+                  <h5>Adaptif & Cepat Belajar</h5>
+                  <p>Mampu menguasai framework dan alur kerja baru secara efisien.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats & Personal Info Grid -->
+          <div class="stats-grid reveal">
+            <div class="stat-card glass-card">
+              <i class="fa-solid fa-graduation-cap stat-icon"></i>
+              <div class="stat-number">3.26</div>
+              <div class="stat-label">IPK Semester Ini (USK)</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <i class="fa-solid fa-diagram-project stat-icon"></i>
+              <div class="stat-number">1+</div>
+              <div class="stat-label">Featured Applied Project</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <i class="fa-solid fa-briefcase stat-icon"></i>
+              <div class="stat-number">2+ Thn</div>
+              <div class="stat-label">Pengalaman Kerja & SPV</div>
+            </div>
+
+            <div class="stat-card glass-card">
+              <i class="fa-solid fa-code-branch stat-icon"></i>
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Tech & Tools Mastered</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SKILLS SECTION
+         ========================================================================= -->
+    <section id="skills" class="section-skills">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-laptop-code"></i> Keahlian & Teknologi</div>
+          <h2 class="section-title">Keahlian <span class="gradient-brand-text">Teknis</span></h2>
+          <p class="section-subtitle">Perangkat, bahasa pemrograman, dan metodologi yang saya gunakan untuk mewujudkan produk digital.</p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Frontend -->
+          <div class="skill-category-card glass-card reveal">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-brands fa-html5"></i></div>
+              <h3 class="skill-cat-title">Frontend Development</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-badge"><i class="fa-brands fa-html5"></i> HTML5</div>
+              <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS3 & Glassmorphism</div>
+              <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+              <div class="skill-badge"><i class="fa-solid fa-network-wired"></i> REST API Integration</div>
+              <div class="skill-badge"><i class="fa-solid fa-mobile-screen"></i> Responsive Web UI</div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend & Database -->
+          <div class="skill-category-card glass-card reveal">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-server"></i></div>
+              <h3 class="skill-cat-title">Backend & Database</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-badge"><i class="fa-solid fa-bolt"></i> FastAPI (Python)</div>
+              <div class="skill-badge"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+              <div class="skill-badge"><i class="fa-solid fa-plug"></i> RESTful Services</div>
+              <div class="skill-badge"><i class="fa-solid fa-shield-halved"></i> Data Modeling</div>
+            </div>
+          </div>
+
+          <!-- Category 3: AI & Machine Learning -->
+          <div class="skill-category-card glass-card reveal">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-brain"></i></div>
+              <h3 class="skill-cat-title">AI & Computer Vision</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-badge"><i class="fa-solid fa-eye"></i> Computer Vision</div>
+              <div class="skill-badge"><i class="fa-solid fa-cubes"></i> Keras (Deep Learning)</div>
+              <div class="skill-badge"><i class="fa-solid fa-calculator"></i> MATLAB</div>
+              <div class="skill-badge"><i class="fa-solid fa-image"></i> Image Classification</div>
+            </div>
+          </div>
+
+          <!-- Category 4: Tools, DevOps & Soft Skills -->
+          <div class="skill-category-card glass-card reveal">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon"><i class="fa-solid fa-toolbox"></i></div>
+              <h3 class="skill-cat-title">Tools & Soft Skills</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git Version Control</div>
+              <div class="skill-badge"><i class="fa-solid fa-code"></i> Visual Studio Code</div>
+              <div class="skill-badge"><i class="fa-solid fa-terminal"></i> PuTTY & SSH</div>
+              <div class="skill-badge"><i class="fa-solid fa-palette"></i> Canva & UI Design</div>
+              <div class="skill-badge"><i class="fa-solid fa-users"></i> Kerja Tim & SPV</div>
+              <div class="skill-badge"><i class="fa-solid fa-clock"></i> Manajemen Waktu</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. PROJECTS SECTION (NILAMTRACE SHOWCASE)
+         ========================================================================= -->
+    <section id="projects" class="section-projects">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-diagram-project"></i> Studi Kasus Unggulan</div>
+          <h2 class="section-title">Proyek <span class="gradient-brand-text">Terapan</span></h2>
+          <p class="section-subtitle">Solusi digital nyata yang menggabungkan Full Stack Web, IoT, dan Computer Vision.</p>
+        </div>
+
+        <!-- Featured Project Card: NILAMTRACE -->
+        <div class="project-featured-card glass-card reveal">
+          
+          <!-- Left: Info & Description -->
+          <div class="project-info">
+            <div class="project-meta-pill">
+              <i class="fa-solid fa-award"></i>
+              <span>Proyek Innovilage 2025</span>
+            </div>
+
+            <h3 class="project-title">
+              NILAMTRACE — Dashboard Analitik Pertanian Nilam
+            </h3>
+            <div class="project-role-badge">
+              <i class="fa-solid fa-user-gear"></i> Peran: Full Stack Developer
+            </div>
+
+            <p class="project-desc">
+              Sistem analitik pertanian berbasis web untuk monitoring data produksi dan kesehatan tanaman nilam secara real-time di <strong>Desa Teuladan, Kec. Seulimum, Kab. Aceh Besar</strong>. Dilengkapi model machine learning deteksi penyakit tanaman berbasis citra daun.
+            </p>
+
+            <div class="project-key-points">
+              <div class="project-point-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Frontend:</strong> Antarmuka interaktif responsif berbasis HTML, CSS, dan JS untuk kemudahan akses petani.</span>
+              </div>
+              <div class="project-point-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Backend:</strong> REST API berkecepatan tinggi menggunakan FastAPI dengan penyimpanan data PostgreSQL.</span>
+              </div>
+              <div class="project-point-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><strong>Machine Learning:</strong> Deteksi penyakit otomatis berbasis Keras Computer Vision yang terintegrasi langsung.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span class="project-tech-tag">HTML5 & CSS3</span>
+              <span class="project-tech-tag">JavaScript</span>
+              <span class="project-tech-tag">FastAPI</span>
+              <span class="project-tech-tag">PostgreSQL</span>
+              <span class="project-tech-tag">Keras / AI</span>
+              <span class="project-tech-tag">Computer Vision</span>
+            </div>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" data-open-modal="nilamtrace">
+                <span>Buka Detail Studi Kasus</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Dashboard UI Mockup -->
+          <div class="project-preview-mockup">
+            <div class="mockup-topbar">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+              <div class="mockup-url-bar"><i class="fa-solid fa-lock" style="font-size: 0.65rem;"></i> nilamtrace.local/dashboard</div>
+            </div>
+
+            <div class="mockup-content">
+              <div class="nilam-mockup-ui">
+                <div class="mockup-hero-stat">
+                  <div class="mockup-stat-card green-accent">
+                    <h6>Kondisi Cuaca & Suhu</h6>
+                    <div class="val">23°C <span style="font-size: 0.8rem; font-weight: normal; color: #6ee7b7;">Mendung</span></div>
+                    <p style="font-size: 0.72rem; color: #a7f3d0; margin-top: 0.2rem;">Desa Teuladan, Aceh</p>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <h6>Kesehatan Tanaman</h6>
+                    <div class="val" style="color: #34d399;">98.4%</div>
+                    <p style="font-size: 0.72rem; color: var(--text-muted); margin-top: 0.2rem;">Deteksi AI: Sehat</p>
+                  </div>
+                </div>
+
+                <div class="mockup-graph-box">
+                  <div class="mockup-graph-header">
+                    <span>Grafik Produksi 12 Bulan Terakhir</span>
+                    <span style="color: var(--color-cyan); font-weight: 600;">+18.5% YoY</span>
+                  </div>
+                  <div class="mockup-bars">
+                    <div class="mockup-bar" style="height: 30%;"></div>
+                    <div class="mockup-bar" style="height: 45%;"></div>
+                    <div class="mockup-bar" style="height: 60%;"></div>
+                    <div class="mockup-bar" style="height: 40%;"></div>
+                    <div class="mockup-bar" style="height: 75%;"></div>
+                    <div class="mockup-bar" style="height: 90%; background: linear-gradient(to top, #10b981, #06b6d4);"></div>
+                    <div class="mockup-bar" style="height: 65%;"></div>
+                    <div class="mockup-bar" style="height: 85%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. WORK EXPERIENCE SECTION
+         ========================================================================= -->
+    <section id="experience" class="section-experience">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-briefcase"></i> Riwayat Karir</div>
+          <h2 class="section-title">Pengalaman <span class="gradient-brand-text">Kerja</span></h2>
+          <p class="section-subtitle">Pengalaman operasional, manajemen tim, serta dedikasi dalam layanan pelanggan.</p>
+        </div>
+
+        <div class="timeline-container">
+          
+          <!-- Timeline Item 1: Supervisor PT Urban Synergy Group -->
+          <div class="timeline-item reveal">
+            <div class="timeline-node"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Supervisor (SPV)</h3>
+                  <div class="timeline-company">PT. Urban Synergy Group</div>
+                </div>
+                <span class="timeline-date-badge"><i class="fa-regular fa-calendar"></i> 2024 — 2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Mengelola operasional harian toko, menyusun dan mengatur jadwal kerja tim secara efisien.</li>
+                <li>Membagi tugas harian secara proporsional kepada seluruh staf untuk memastikan target operasional tercapai.</li>
+                <li>Melakukan verifikasi dan rekonsiliasi transaksi kasir guna memastikan pencatatan keuangan harian berjalan akurat.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Barista & Waiter MJD Coffee -->
+          <div class="timeline-item reveal">
+            <div class="timeline-node"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Barista & Waiter</h3>
+                  <div class="timeline-company">MJD Coffee</div>
+                </div>
+                <span class="timeline-date-badge"><i class="fa-regular fa-calendar"></i> 2025 — 2026</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Melayani pelanggan dengan ramah, komunikatif, dan responsif terhadap preferensi menu.</li>
+                <li>Menyiapkan pesanan minuman kopi dan makanan sesuai standar resep dan higienitas tinggi.</li>
+                <li>Menjaga kualitas layanan kedai kopi dan membangun retensi pelanggan yang positif.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Barista & Waiter PT Urban Synergy Group -->
+          <div class="timeline-item reveal">
+            <div class="timeline-node"></div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Barista & Waiter</h3>
+                  <div class="timeline-company">PT. Urban Synergy Group</div>
+                </div>
+                <span class="timeline-date-badge"><i class="fa-regular fa-calendar"></i> 2024 — 2025</span>
+              </div>
+              <ul class="timeline-bullets">
+                <li>Menyiapkan berbagai racikan minuman pesanan pelanggan dengan konsistensi rasa yang teruji.</li>
+                <li>Menjaga kebersihan, sanitasi, dan kerapihan area kerja stasiun barista.</li>
+                <li>Memberikan pelayanan yang prima dan menyelesaikan kebutuhan pelanggan dengan cekatan.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. EDUCATION SECTION
+         ========================================================================= -->
+    <section id="education" class="section-education">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Jejak Akademik</div>
+          <h2 class="section-title">Riwayat <span class="gradient-brand-text">Pendidikan</span></h2>
+          <p class="section-subtitle">Landasan pengetahuan formal di bidang teknik komputer dan sains.</p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Edu 1: USK -->
+          <div class="edu-card glass-card reveal">
+            <div>
+              <div class="edu-header">
+                <div class="edu-icon-box"><i class="fa-solid fa-university"></i></div>
+                <div>
+                  <h3 class="edu-title">S1 Teknik Komputer</h3>
+                  <div class="edu-institution">Universitas Syiah Kuala (USK)</div>
+                </div>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+                Mendalami arsitektur komputer, algoritma pemrograman, rekayasa web full stack, kecerdasan buatan, sistem basis data, dan sistem tertanam.
+              </p>
+            </div>
+            <div class="edu-meta">
+              <span class="glass-pill"><i class="fa-regular fa-calendar"></i> 2024 — Sekarang</span>
+              <span class="edu-gpa-badge"><i class="fa-solid fa-star"></i> IPK Sementara: 3.26 / 4.00</span>
+            </div>
+          </div>
+
+          <!-- Edu 2: SMAN 7 -->
+          <div class="edu-card glass-card reveal">
+            <div>
+              <div class="edu-header">
+                <div class="edu-icon-box"><i class="fa-solid fa-school"></i></div>
+                <div>
+                  <h3 class="edu-title">Jurusan MIPA (IPA)</h3>
+                  <div class="edu-institution">SMA Negeri 7 Banda Aceh</div>
+                </div>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+                Fokus studi sains dan matematika dasar dengan keterlibatan aktif dalam kegiatan keilmuan dan keorganisasian sekolah.
+              </p>
+            </div>
+            <div class="edu-meta">
+              <span class="glass-pill"><i class="fa-regular fa-calendar"></i> 2021 — 2024</span>
+              <span class="glass-pill" style="color: var(--color-cyan);"><i class="fa-solid fa-check"></i> Lulus</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. CONTACT & SOCIALS SECTION
+         ========================================================================= -->
+    <section id="contact" class="section-contact">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="section-tag"><i class="fa-solid fa-paper-plane"></i> Hubungi Saya</div>
+          <h2 class="section-title">Mari <span class="gradient-brand-text">Terhubung</span></h2>
+          <p class="section-subtitle">Tertarik untuk berkolaborasi, berdiskusi proyek, atau menawarkan peluang karir? Kirimkan pesan Anda!</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info & Direct Links -->
+          <div class="contact-info-card glass-card reveal">
+            <h3 style="font-size: 1.35rem; font-weight: 800;" class="gradient-text">Informasi Kontak</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Anda dapat menghubungi saya langsung melalui email, WhatsApp, atau media sosial berikut:
+            </p>
+
+            <a href="mailto:nfadhillah206@gmail.com" class="contact-method">
+              <div class="contact-method-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div class="contact-method-info">
+                <h5>Email Resmi</h5>
+                <p>nfadhillah206@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://wa.me/62895402432636" target="_blank" rel="noopener noreferrer" class="contact-method">
+              <div class="contact-method-icon" style="color: #25D366;"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contact-method-info">
+                <h5>WhatsApp</h5>
+                <p>+62 895-4024-32636</p>
+              </div>
+            </a>
+
+            <div class="contact-method">
+              <div class="contact-method-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="contact-method-info">
+                <h5>Domisili</h5>
+                <p>Banda Aceh, Indonesia</p>
+              </div>
+            </div>
+
+            <div class="socials-title">Media Sosial & Portofolio Kode</div>
+            <div class="social-pills-row">
+              <a href="https://github.com/maybeitspall" target="_blank" rel="noopener noreferrer" class="social-pill github">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/naufal-fadhillah-024448394" target="_blank" rel="noopener noreferrer" class="social-pill linkedin">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+              </a>
+              <a href="https://www.instagram.com/nopallsfd?igsh=aXFzeGtyMmJ1dXFk&utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-pill instagram">
+                <i class="fa-brands fa-instagram"></i> Instagram
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="contact-form-card glass-card reveal">
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 1.25rem;" class="gradient-text">Kirim Pesan Cepat</h3>
+            
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nama Lengkap</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Masukkan nama Anda" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Alamat Email</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="nama@contoh.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-msg">Isi Pesan</label>
+                <textarea id="contact-msg" name="message" class="form-textarea" placeholder="Tuliskan pesan atau penawaran Anda..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Kirim Pesan</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       9. PROJECT MODAL (NILAMTRACE FULL STUDY)
+       ========================================================================= -->
+  <div id="project-modal" class="project-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="project-modal-dialog glass-card">
+      <div class="modal-header">
+        <div>
+          <div class="section-tag" style="margin-bottom: 0.5rem;"><i class="fa-solid fa-code-branch"></i> Inovasi Pertanian Cerdas</div>
+          <h3 id="modal-project-title" class="project-title" style="font-size: 1.8rem;">
+            NILAMTRACE Case Study
+          </h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Tutup Dialog Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-body-section">
+          <h4><i class="fa-solid fa-bullseye"></i> Latar Belakang & Tujuan Proyek</h4>
+          <p>
+            Proyek Innovilage 2025 ini bertujuan membangun ekosistem digital untuk mendampingi petani nilam di Desa Teuladan, Kec. Seulimum, Kab. Aceh Besar. Sistem ini menyediakan pemantauan metrik pertanian secara presisi untuk memitigasi gagal panen dan memaksimalkan hasil minyak nilam berkualitas tinggi.
+          </p>
+        </div>
+
+        <div class="modal-body-section">
+          <h4><i class="fa-solid fa-code"></i> Peran & Tanggung Jawab (Full Stack Developer)</h4>
+          <p>
+            Sebagai Full Stack Developer, Naufal bertanggung jawab dari hulu ke hilir:
+          </p>
+          <ul style="padding-left: 1.25rem; margin-top: 0.5rem; color: var(--text-muted); list-style: disc;">
+            <li>Merancang antarmuka dashboard responsif berbasis HTML, CSS, dan JavaScript murni yang mudah dipahami oleh petani dan pihak pengelola.</li>
+            <li>Membangun backend service menggunakan FastAPI dengan database PostgreSQL untuk manajemen produksi dan riwayat kesehatan tanaman.</li>
+            <li>Melatih dan mengintegrasikan model machine learning klasifikasi penyakit tanaman nilam berbasis Keras (Computer Vision).</li>
+            <li>Memastikan sinkronisasi data analitik dan hasil diagnosa citra dapat diakses secara otomatis dan real-time.</li>
+          </ul>
+        </div>
+
+        <div class="modal-body-section">
+          <h4><i class="fa-solid fa-layer-group"></i> Arsitektur Teknologi</h4>
+          <div class="project-tech-stack" style="margin-top: 0.5rem;">
+            <span class="project-tech-tag">Frontend: HTML5, CSS3, JavaScript</span>
+            <span class="project-tech-tag">Backend: FastAPI (Python)</span>
+            <span class="project-tech-tag">Database: PostgreSQL</span>
+            <span class="project-tech-tag">AI/ML: Keras / Computer Vision</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       10. FOOTER & BACK TO TOP
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          Naufal<span class="gradient-brand-text">.dev</span>
+        </div>
+        <p style="color: var(--text-muted); max-width: 500px; font-size: 0.95rem;">
+          Portfolio website pribadi dengan estetika Liquid Glass, dibangun untuk performa tinggi dan kompatibilitas penuh di GitHub Pages.
+        </p>
+
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">Tentang</a>
+          <a href="#skills">Keahlian</a>
+          <a href="#projects">Proyek</a>
+          <a href="#experience">Pengalaman</a>
+          <a href="#education">Pendidikan</a>
+          <a href="#contact">Kontak</a>
+        </div>
+
+        <div class="footer-copyright">
+          &copy; 2026 <strong>Naufal Fadhillah</strong>. All rights reserved. Made with Liquid Glass Design.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button class="back-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/liquid-background.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
