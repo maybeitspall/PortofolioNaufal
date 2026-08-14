@@ -681,19 +681,19 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center center;
   transition: transform 0.5s ease;
 }
 
 .avatar-glass-card:hover .avatar-real-img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .avatar-frame::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6, 8, 24, 0.75) 0%, transparent 40%);
+  background: linear-gradient(to top, rgba(6, 8, 24, 0.35) 0%, transparent 15%);
   pointer-events: none;
 }
 
@@ -1836,59 +1836,337 @@ img {
 }
 
 /* --------------------------------------------------------------------------
-   16. RESPONSIVE BREAKPOINTS
+   16. COMPREHENSIVE RESPONSIVE DESIGN (MOBILE & TABLET POLISH)
    -------------------------------------------------------------------------- */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 3.5rem;
+    text-align: center;
   }
-  
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-badge {
+    margin: 0 auto;
+  }
+
+  .hero-desc {
+    margin: 0 auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-quick-info {
+    justify-content: center;
+  }
+
   .hero-visual {
     order: -1;
   }
 
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .project-featured-card {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --section-padding: 4rem 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Navbar Mobile */
+  .navbar {
+    height: 58px;
+    padding: 0 1rem;
+    width: calc(100% - 1.5rem);
+    top: 0.75rem;
+  }
+
   .nav-links, .nav-cta {
     display: none;
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+  }
+
+  .mobile-menu {
+    top: 4.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+
+  /* Hero Mobile */
+  .hero {
+    padding: 6.5rem 1rem 3rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+    letter-spacing: -0.02em;
+  }
+
+  .hero-typewriter-container {
+    font-size: 1.15rem;
+    min-height: 2.8rem;
+    justify-content: center;
+  }
+
+  .hero-desc {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .avatar-glass-card {
+    max-width: 290px;
+    padding: 1.1rem;
+    border-radius: 24px;
+  }
+
+  .avatar-frame {
+    aspect-ratio: 1 / 1.15;
+    border-radius: 18px;
+  }
+
+  .avatar-real-img {
+    object-position: center center;
+    transform: none;
+  }
+
+  .floating-pill-orbit {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .orbit-1 {
+    top: -6px;
+    left: -4px;
+  }
+
+  .orbit-2 {
+    bottom: 12px;
+    right: -4px;
+  }
+
+  .avatar-badge-floating {
+    position: relative;
+    inset: auto;
+    margin-top: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 14px;
+  }
+
+  .avatar-badge-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .avatar-badge-text h4 {
+    font-size: 0.82rem;
+  }
+
+  .avatar-badge-text p {
+    font-size: 0.72rem;
+  }
+
+  .hero-quick-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  /* Section Headers */
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* Cards Mobile */
+  .about-card-main {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .stats-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
   }
 
+  .stat-card {
+    padding: 1.35rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.85rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .skill-category-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Project Featured Card Mobile */
+  .project-featured-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .project-title {
+    font-size: 1.45rem;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+  }
+
+  .certificate-badge-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .cert-thumbnail-btn {
+    width: 100%;
+    height: 120px;
+  }
+
+  /* Timeline Mobile */
   .timeline-container::before {
-    left: 15px;
+    left: 12px;
   }
 
   .timeline-item {
-    padding-left: 45px;
+    padding-left: 36px;
+    margin-bottom: 1.75rem;
   }
 
   .timeline-node {
-    left: 5px;
+    left: 1px;
+    top: 1.25rem;
+    width: 22px;
+    height: 22px;
   }
 
-  .hero-title {
-    font-size: 2.25rem;
+  .timeline-card {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .timeline-role {
+    font-size: 1.1rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .timeline-date-badge {
+    align-self: flex-start;
+  }
+
+  /* Education Grid Mobile */
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .edu-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Contact Mobile */
+  .contact-info-card, .contact-form-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .form-input, .form-textarea {
+    font-size: 16px; /* Prevents iOS auto-zoom */
+    padding: 0.85rem 1rem;
+  }
+
+  .social-pills-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .social-pill {
+    justify-content: center;
+  }
+
+  /* Modal Dialog Mobile */
+  .project-modal-backdrop {
+    padding: 1rem;
+  }
+
+  .project-modal-dialog {
+    padding: 1.5rem 1.2rem;
+    max-height: 88vh;
+    border-radius: 20px;
+  }
+
+  #modal-project-title {
+    font-size: 1.35rem !important;
+  }
+
+  /* Back to top */
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
   }
 }
 
@@ -1898,8 +2176,9 @@ img {
     width: 100%;
   }
 
-  .btn {
+  .hero-actions .btn, .hero-actions .glass-pill {
     width: 100%;
+    justify-content: center;
   }
 
   .stats-grid {
@@ -1910,3 +2189,4 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
